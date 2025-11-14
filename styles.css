@@ -52,3 +52,15 @@ section {
 }
 .text-center { text-align: center; }
 
+/* ------------------------------------------------------------------- */
+/* 3. SECCIÓN HERO / INICIO */
+/* ------------------------------------------------------------------- */
+
+#inicio {
+    background-color: var(var(--color-primary));
+    color: white;
+    text-align: center;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px -6px rgba(0, 0, 0, 0.05);
+}
