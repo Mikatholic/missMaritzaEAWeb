@@ -1,0 +1,9 @@
+/* Configuración de color custom para la paleta de morados y acentos */
+:root {
+    --color-primary: #6A1B9A; /* Morado Principal */
+    --color-secondary: #FFEB3B; /* Amarillo Suave/Acento */
+    --color-bg-light: #EDE7F6; /* Lavanda Muy Suave */
+    --color-bg-dark: #4A148C; /* Morado Oscuro */
+    --color-text-dark: #333333;
+    --max-width-content: 1280px;
+}
