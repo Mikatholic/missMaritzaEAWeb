@@ -7,3 +7,13 @@
     --color-text-dark: #333333;
     --max-width-content: 1280px;
 }
+
+/* Aplicando la fuente Inter y colores */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: white;
+    color: var(--color-text-dark);
+    scroll-behavior: smooth;
+    margin: 0;
+    line-height: 1.6;
+}
