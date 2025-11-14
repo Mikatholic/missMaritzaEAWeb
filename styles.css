@@ -1,6 +1,4 @@
-/* ------------------------------------------------------------------- */
-/* 1. VARIABLES Y CONFIGURACIÓN BASE */
-/* ------------------------------------------------------------------- */
+/* 1. Variables y configuración base */
 
 /* Configuración de color custom para la paleta de morados y acentos */
 :root {
@@ -57,9 +55,7 @@ section {
 .text-center { text-align: center; }
 
 
-/* ------------------------------------------------------------------- */
-/* 2. HEADER Y NAVEGACIÓN (Ajustado para <nac>) */
-/* ------------------------------------------------------------------- */
+/* 2. Header y navegación (Ajustado para <nac>) */
 
 header {
     background-color: var(--color-bg-dark);
@@ -109,9 +105,7 @@ header nac a:hover { /* Selector ajustado a <nac> */
 }
 
 
-/* ------------------------------------------------------------------- */
-/* 3. SECCIÓN HERO / INICIO */
-/* ------------------------------------------------------------------- */
+/* 3. Sección Hero / Inicio */
 
 #inicio {
     background-color: var(--color-primary);
@@ -140,9 +134,7 @@ header nac a:hover { /* Selector ajustado a <nac> */
 }
 
 
-/* ------------------------------------------------------------------- */
-/* 4. BIOGRAFÍA */
-/* ------------------------------------------------------------------- */
+/* 4. Biografia */
 
 #biografia {
     background-color: var(--color-bg-light);
@@ -164,9 +156,7 @@ header nac a:hover { /* Selector ajustado a <nac> */
 }
 
 
-/* ------------------------------------------------------------------- */
-/* 5. LÍNEA DE TIEMPO (LOGROS) */
-/* ------------------------------------------------------------------- */
+/* 5. Línea de tiempo (logros) */
 
 #logros {
     max-width: var(--max-width-content);
@@ -222,15 +212,67 @@ header nac a:hover { /* Selector ajustado a <nac> */
     margin-bottom: 0;
 }
 
-/* ------------------------------------------------------------------- */
 /* 6. Diplomas y reconocimientos */
-/* ------------------------------------------------------------------- */
+#diplomas {
+    background-color: var(--color-bg-dark);
+    color: white;
+    text-align: center;
+}
+#diplomas h2 {
+    color: var(--color-secondary);
+    margin-bottom: 3rem;
+}
+#diplomas + div { /* Aplica estilos al <div> que sigue inmediatamente a la sección #diplomas */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem 1.5rem; /* Añadir padding para que no se pegue al borde */
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
 
-/* ------------------------------------------------------------------- */
+/* Estilos para cada <figure> de diploma */
+#diplomas + div figure {
+    background-color: white;
+    color: var(--color-text-dark);
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 350px;
+    flex-basis: calc(33.333% - 1rem); /* 3 en desktop, ajustando por el gap de 1.5rem */
+    transition: transform 0.3s;
+}
+
+#diplomas + div figure:hover{
+    transform: traslateY(-5px);
+}
+#diplomas + div figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+#diplomas + div figure figcaption {
+    padding: 1.25rem;
+    text-align: left;
+}
+#diplomas + div figure figcaption h3 {
+    color: var(--color-primary);
+}
+/* Responsive para diplomas (2 en tablet, 1 en móvil) */
+@media (max-width: 1024px) {
+    #diplomas + div figure {
+        flex-basis: calc(50% - 0.75rem); /* 2 en tablet */
+    }
+}
+@media (max-width: 640px) {
+    #diplomas + div figure {
+        flex-basis: 100%; /* 1 en móvil */
+    }
+}
+
 /* 7. Galeria de actividades */
-/* ------------------------------------------------------------------- */
 
 
-/* ------------------------------------------------------------------- */
 /* 8. Contacto y Footer */
-/* ------------------------------------------------------------------- */
