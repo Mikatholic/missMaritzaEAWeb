@@ -34,7 +34,8 @@ body.dark-mode {
 /* Invertir colores de títulos y texto */
 .dark-mode h1, 
 .dark-mode h2, 
-.dark-mode h3 {
+.dark-mode h3 
+.dark-mode p{
     color: var(--dark-text); 
 }
 .dark-mode h1 {
