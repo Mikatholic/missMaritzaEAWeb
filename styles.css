@@ -34,7 +34,7 @@ body.dark-mode {
 /* Invertir colores de títulos y texto */
 .dark-mode h1, 
 .dark-mode h2, 
-.dark-mode h3 
+.dark-mode h3, 
 .dark-mode p{
     color: var(--dark-text); 
 }
@@ -56,10 +56,10 @@ body.dark-mode {
 }
 
 /* Navegación del Header */
-.dark-mode header nac a {
+.dark-mode header nav a {
     color: var(--dark-text); /* Enlaces más claros */
 }
-.dark-mode header nac a:hover {
+.dark-mode header nav a:hover {
     color: var(--dark-accent);
 
 }
@@ -189,7 +189,7 @@ header h1 {
     color: white; /* El h1 dentro del header debe ser blanco */
 }
 
-header nac ul { /* Selector ajustado a <nac> */
+header nav ul { /* Selector ajustado a <nav> */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -197,20 +197,20 @@ header nac ul { /* Selector ajustado a <nac> */
     gap: 1.5rem;
 }
 
-header nac a { /* Selector ajustado a <nac> */
+header nav a { /* Selector ajustado a <nav> */
     color: white;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s;
 }
 
-header nac a:hover { /* Selector ajustado a <nac> */
+header nav a:hover { /* Selector ajustado a <nav> */
     color: var(--color-secondary);
 }
 
 /* Ocultar la navegación en dispositivos pequeños (responsive) */
 @media (max-width: 768px) {
-    header nac { /* Selector ajustado a <nac> */
+    header nav { /* Selector ajustado a <nav> */
         display: none;
     }
     header {
@@ -409,7 +409,7 @@ header nac a:hover { /* Selector ajustado a <nac> */
     color: var(--color-secondary);
     margin-bottom: 3rem;
 }
-#diplomas + div { /* Aplica estilos al <div> que sigue inmediatamente a la sección #diplomas */
+.diplomas-grid { /* Aplica estilos al <div> que sigue inmediatamente a la sección #diplomas */
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -420,7 +420,7 @@ header nac a:hover { /* Selector ajustado a <nac> */
 }
 
 /* Estilos para cada <figure> de diploma */
-#diplomas + div figure {
+.diplomas-grid figure {
     background-color: white;
     color: var(--color-text-dark);
     border-radius: 0.75rem;
@@ -431,30 +431,30 @@ header nac a:hover { /* Selector ajustado a <nac> */
     transition: transform 0.3s;
 }
 
-#diplomas + div figure:hover{
-    transform: traslateY(-5px);
+.diplomas-grid figure:hover{
+    transform: translateY(-5px);
 }
-#diplomas + div figure img {
+.diplomas-grid figure img {
     width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
 }
-#diplomas + div figure figcaption {
+.diplomas-grid figure figcaption {
     padding: 1.25rem;
     text-align: left;
 }
-#diplomas + div figure figcaption h3 {
+.diplomas-grid figure figcaption h3 {
     color: var(--color-primary);
 }
 /* Responsive para diplomas (2 en tablet, 1 en móvil) */
 @media (max-width: 1024px) {
-    #diplomas + div figure {
+    .diplomas-grid figure {
         flex-basis: calc(50% - 0.75rem); /* 2 en tablet */
     }
 }
 @media (max-width: 640px) {
-    #diplomas + div figure {
+    .diplomas-grid figure {
         flex-basis: 100%; /* 1 en móvil */
     }
 }
@@ -511,7 +511,7 @@ header nac a:hover { /* Selector ajustado a <nac> */
 /* ------------------------------------------------------------------- */
 /* 8. Contacto y Footer */
 /* ------------------------------------------------------------------- */
-#Contacto { /* El ID en tu HTML es "Contacto" con C mayúscula */
+#contacto { 
     background-color: var(--color-primary);
     color: white;
     border-top-left-radius: 2rem;
@@ -520,23 +520,23 @@ header nac a:hover { /* Selector ajustado a <nac> */
     max-width: var(--max-width-content);
     margin: 0 auto;
 }
-#Contacto h2 {
+#contacto h2 {
     color: var(--color-secondary);
     margin-bottom: 1.5rem;
 }
-#Contacto > div:nth-last-of-type(1) { /* Contenedor de redes sociales */
+#contacto > div:nth-last-of-type(1) { /* Contenedor de redes sociales */
     display: flex;
     justify-content: center;
     gap: 2rem;
     margin-bottom: 3rem;
     font-size: 1.25rem;
 }
-#Contacto a {
+#contacto a {
     color: var(--color-secondary);
     text-decoration: none;
-    transition: color 0.3s, transform 0.3;
+    transition: color 0.3s, transform 0.3s;
 }
-#Contacto a:hover {
+#contacto a:hover {
     color: white;
     transform: scale(1.1);
 }
