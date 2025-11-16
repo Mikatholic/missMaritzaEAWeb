@@ -320,3 +320,40 @@ header nac a:hover { /* Selector ajustado a <nac> */
 }  
 
 /* 8. Contacto y Footer */
+#Contacto { /* El ID en tu HTML es "Contacto" con C mayúscula */
+    background-color: var(--color-primary);
+    color: white;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    text-align: center;
+    max-width: var(--max-width-content);
+    margin: 0 auto;
+}
+#Contacto h2 {
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+}
+#Contacto > div:nth-last-of-type(1) { /* Contenedor de redes sociales */
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.25rem;
+}
+#Contacto a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3;
+}
+#Contacto a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+footer {
+    background-color: var(--color-bg-dark);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.875rem;
+}
