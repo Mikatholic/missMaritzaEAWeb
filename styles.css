@@ -34,6 +34,15 @@ section {
     padding: 4rem 1.5rem; /* py-16 px-6 */
 }
 
+/* Contenedor central de contenido */
+section {
+    padding: 4rem 1.5rem; /* py-16 px-6 */
+    /* CORRECCIÓN CLAVE: Agrega un margen de desplazamiento (scroll-margin-top) */
+    /* Esto asegura que, al saltar a un ancla (ID), el navegador deje suficiente espacio libre */
+    /* por encima para que el encabezado pegajoso no oculte el contenido. */
+    scroll-margin-top: 6rem; /* Deja un espacio de 6rem por encima del ancla */
+}
+
 /* Clase para el botón principal (Conoce mi Biografia) */
 #inicio a {
     display: inline-block;
