@@ -40,27 +40,9 @@ section {
     /* CORRECCIÓN CLAVE: Agrega un margen de desplazamiento (scroll-margin-top) */
     /* Esto asegura que, al saltar a un ancla (ID), el navegador deje suficiente espacio libre */
     /* por encima para que el encabezado pegajoso no oculte el contenido. */
-    scroll-margin-top: 6rem; /* Deja un espacio de 6rem por encima del ancla */
+    scroll-margin-top: 5rem; /* Deja un espacio de 6rem por encima del ancla */
 }
 
-/* Clase para el botón principal (Conoce mi Biografia) */
-#inicio a {
-    display: inline-block;
-    padding: 0.75rem 2rem; /* px-8 py-3 */
-    font-size: 1.125rem; /* text-lg */
-    font-weight: 600; /* font-semibold */
-    border-radius: 9999px; /* rounded-full */
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    background-color: white; /* Botón blanco en fondo primario */
-    color: var(--color-primary);
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s, color 0.3s;
-}
-#inicio a:hover {
-    background-color: var(--color-secondary);
-    color: var(--color-bg-dark);
-    transform: translateY(-2px);
-}
 .text-center { text-align: center; }
 
 
