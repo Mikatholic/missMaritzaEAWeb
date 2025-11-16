@@ -168,7 +168,56 @@
      <footer>
         <p>&copy; 2025 Miss Maritza Escalante Arroyo. Casi todos los derechos reservados</p>
      </footer>
-    
 
+     <!-- SCRIPT PARA GESTIONAR EL MODO OSCURO (AGREGADO) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggle = document.getElementById('dark-mode-toggle');
+            const icon = toggle.querySelector('i');
+            const body = document.body;
+            
+            // Función para aplicar el tema
+            const applyTheme = (isDark) => {
+                if (isDark) {
+                    body.classList.add('dark-mode');
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                } else {
+                    body.classList.remove('dark-mode');
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                }
+            };
+
+            // 1. Cargar la preferencia del localStorage o detectar la preferencia del sistema
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            if (savedTheme === 'dark') {
+                applyTheme(true);
+            } else if (savedTheme === 'light') {
+                applyTheme(false);
+            } else if (prefersDark) {
+                // Si no hay preferencia guardada, usa la del sistema
+                applyTheme(true);
+            } else {
+                // Por defecto es claro
+                applyTheme(false);
+            }
+
+            // 2. Manejar el evento de click en el toggle
+            toggle.addEventListener('click', () => {
+                const isCurrentlyDark = body.classList.contains('dark-mode');
+                
+                if (isCurrentlyDark) {
+                    applyTheme(false);
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    applyTheme(true);
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+        });
+    </script>  
 </body>
 </html>
