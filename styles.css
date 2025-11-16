@@ -1,5 +1,6 @@
+/* ------------------------------------------------------------------- */
 /* 1. Variables y configuración base */
-
+/* ------------------------------------------------------------------- */
 /* Configuración de color custom para la paleta de morados y acentos */
 :root {
     /* Colores Claros (Light Mode Defaults) */
@@ -21,6 +22,124 @@
     --max-width-content: 1280px;
 }
 
+/* ------------------------------------------------------------------- */
+/* 1.1 Estilos para el Modo Oscuro */
+/* ------------------------------------------------------------------- */
+/* Se aplica a todo el <body> cuando el script detecta o activa el modo oscuro */
+body.dark-mode {
+    background-color: var(--dark-bg);
+    color: var(--dark-text);
+}
+
+/* Invertir colores de títulos y texto */
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3 {
+    color: var(--dark-text); 
+}
+.dark-mode h1 {
+    color: white; /* Asegurar que el título del header (que tiene fondo oscuro primario) siga siendo blanco */
+}
+
+/* SECCIONES: Aplicar fondo y texto oscuro */
+.dark-mode section {
+    background-color: var(--dark-bg);
+}
+
+/* Header, Footer y Contacto (fondos oscuros originales, ajustamos el color) */
+.dark-mode header,
+.dark-mode footer,
+.dark-mode #contacto {
+    background-color: var(--dark-highlight); /* Usamos un tono de morado menos profundo en modo oscuro */
+    color: white;
+}
+
+/* Navegación del Header */
+.dark-mode header nac a {
+    color: var(--dark-text); /* Enlaces más claros */
+}
+.dark-mode header nac a:hover {
+    color: var(--dark-accent);
+
+}
+
+/* Sección Biografía (que tiene fondo claro original) */
+.dark-mode #biografia {
+    background-color: var(--dark-card-bg);
+}
+/* Estilo para el párrafo de filosofía (cita) */
+.dark-mode #biografia p:nth-child(3) {
+    border-left-color: var(--dark-accent);
+    background-color: #33334d; /* Fondo ligeramente diferente para la cita */
+}
+
+/* Línea de tiempo (Logros) */
+/* Contenedor y línea vertical */
+.dark-mode .timeline-container::after {
+    background-color: var(--dark-text);
+}
+
+/* Ítems de la línea de tiempo */
+.dark-mode .timeline-item {
+    background-color: var(--dark-card-bg);
+    box-shadow: 0 1px 3px rgba(255, 255, 255, 0.1);
+}
+
+/* Flechas de los ítems */
+.dark-mode .timeline-item.left::after {
+    border-left-color: var(--dark-card-bg);
+}
+.dark-mode .timeline-item:not(.left)::after {
+    border-right-color: var(--dark-card-bg);
+}
+
+/* Puntos de la línea de tiempo */
+.dark-mode .timeline-item::before {
+    background-color: var(--dark-accent);
+    border-color: var(--dark-highlight);
+}
+
+/* Diplomas y Reconocimientos (fondos de tarjetas) */
+.dark-mode .diplomas-grid figure {
+    background-color: var(--dark-card-bg);
+    color: var(--dark-text);
+    box-shadow: 0 20px 25px -5px rgba(255, 255, 255, 0.05);
+}
+.dark-mode .diplomas-grid figure figcaption h3 {
+    color: var(--dark-accent);
+}
+
+/* Galeria de actividades*/
+.dark-mode #galeria {
+    background-color: var(--dark-bg); /* Asegura que el fondo sea oscuro */
+}
+.dark-mode #galeria figcaption {
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo de la leyenda más claro/transparente */
+}
+
+/* ------------------------------------------------------------------- */
+/* 1.2 Estilo del botón Modo Oscuro Toggle */
+/* ------------------------------------------------------------------- */
+
+#dark-mode-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    transition: color 0.3s;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+#dark-mode-toggle:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ------------------------------------------------------------------- */
+/* 2. Header y navegación (Ajustado para <nac>) */
+/* ------------------------------------------------------------------- */
 /* Aplicando la fuente Inter (se asume cargada en HTML) y colores */
 body {
     font-family: 'Inter', sans-serif;
@@ -43,11 +162,6 @@ h3 { font-size: 1.5rem; }  /* text-2xl */
 /* Contenedor central de contenido */
 section {
     padding: 4rem 1.5rem; /* py-16 px-6 */
-}
-
-/* Contenedor central de contenido */
-section {
-    padding: 4rem 1.5rem; /* py-16 px-6 */
     /* CORRECCIÓN CLAVE: Agrega un margen de desplazamiento (scroll-margin-top) */
     /* Esto asegura que, al saltar a un ancla (ID), el navegador deje suficiente espacio libre */
     /* por encima para que el encabezado pegajoso no oculte el contenido. */
@@ -55,9 +169,6 @@ section {
 }
 
 .text-center { text-align: center; }
-
-
-/* 2. Header y navegación (Ajustado para <nac>) */
 
 header {
     background-color: var(--color-bg-dark);
@@ -106,8 +217,9 @@ header nac a:hover { /* Selector ajustado a <nac> */
     }
 }
 
-
+/* ------------------------------------------------------------------- */
 /* 3. Sección Hero / Inicio */
+/* ------------------------------------------------------------------- */
 #inicio {
     background-color: var(--color-primary);
     color: white;
@@ -134,8 +246,9 @@ header nac a:hover { /* Selector ajustado a <nac> */
     display: block;
 }
 
-
+/* ------------------------------------------------------------------- */
 /* 4. Biografia */
+/* ------------------------------------------------------------------- */
 #biografia {
     background-color: var(--color-bg-light);
     max-width: var(--max-width-content);
@@ -155,8 +268,9 @@ header nac a:hover { /* Selector ajustado a <nac> */
     border-radius: 0.5rem;
 }
 
-
+/* ------------------------------------------------------------------- */
 /* 5. Línea de tiempo (logros) - Implementación central intercalada */
+/* ------------------------------------------------------------------- */
 #logros {
     max-width: var(--max-width-content);
     margin: 0 auto;
@@ -282,7 +396,9 @@ header nac a:hover { /* Selector ajustado a <nac> */
     }
 }
 
+/* ------------------------------------------------------------------- */
 /* 6. Diplomas y reconocimientos */
+/* ------------------------------------------------------------------- */
 #diplomas {
     background-color: var(--color-bg-dark);
     color: white;
@@ -342,7 +458,9 @@ header nac a:hover { /* Selector ajustado a <nac> */
     }
 }
 
+/* ------------------------------------------------------------------- */
 /* 7. Galeria de actividades */
+/* ------------------------------------------------------------------- */
 #galeria {
     background-color: white; /* Cambiado a blanco para mejor contraste */
     text-align: center;
@@ -389,7 +507,9 @@ header nac a:hover { /* Selector ajustado a <nac> */
      opacity: 1;
 }  
 
+/* ------------------------------------------------------------------- */
 /* 8. Contacto y Footer */
+/* ------------------------------------------------------------------- */
 #Contacto { /* El ID en tu HTML es "Contacto" con C mayúscula */
     background-color: var(--color-primary);
     color: white;
