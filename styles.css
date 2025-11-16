@@ -2,11 +2,22 @@
 
 /* Configuración de color custom para la paleta de morados y acentos */
 :root {
+    /* Colores Claros (Light Mode Defaults) */
     --color-primary: #6A1B9A; /* Morado Principal */
     --color-secondary: #FFEB3B; /* Amarillo Suave/Acento */
     --color-bg-light: #EDE7F6; /* Lavanda Muy Suave */
-    --color-bg-dark: #4A148C; /* Morado Oscuro */
-    --color-text-dark: #333333;
+    --color-bg-dark: #4A148C; /* Morado Oscuro para Headers y Footers */
+    --color-text-dark: #333333; /* Texto principal oscuro */
+    --color-background: white; /* Fondo de la página principal */
+    --color-card-bg: white; /* Fondo de tarjetas o elementos resaltados */
+
+    /* Colores Oscuros (Dark Mode Variables) */
+    --dark-bg: #1A1A2E; /* Fondo oscuro profundo */
+    --dark-card-bg: #272B45; /* Fondo de tarjetas/elementos en modo oscuro */
+    --dark-text: #F0F0F0; /* Texto claro */
+    --dark-highlight: #9C27B0; /* Morado Primario Ajustado */
+    --dark-accent: #FFD54F; /* Amarillo Suave Ajustado */
+
     --max-width-content: 1280px;
 }
 
