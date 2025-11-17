@@ -149,6 +149,7 @@ body {
     scroll-behavior: smooth;
     margin: 0;
     line-height: 1.6;
+    font-size: 1.5rem;
 }
 
 /* Estilos para títulos */
