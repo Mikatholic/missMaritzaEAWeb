@@ -167,7 +167,7 @@ section {
     /* CORRECCIÓN CLAVE: Agrega un margen de desplazamiento (scroll-margin-top) */
     /* Esto asegura que, al saltar a un ancla (ID), el navegador deje suficiente espacio libre */
     /* por encima para que el encabezado pegajoso no oculte el contenido. */
-    scroll-margin-top: 5rem; /* Deja un espacio de 6rem por encima del ancla */
+    scroll-margin-top: 2rem; /* Deja un espacio de 2rem por encima del ancla */
 }
 
 .text-center { text-align: center; }
